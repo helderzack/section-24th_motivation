@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="30dp"
+        android:layout_marginVertical="32dp"
         android:background="@drawable/round_corners"
         android:backgroundTint="?attr/colorPrimaryContainer"
         android:paddingHorizontal="28dp"

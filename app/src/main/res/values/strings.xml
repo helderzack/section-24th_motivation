@@ -5,7 +5,10 @@
     <string name="save_button">Salvar</string>
     <string name="toast_text">Please enter your name!</string>
     <string name="motivation_placeholder">Você não é derrotado quando perde, você é derrotado quando desiste!</string>
-    <string name="user_placeholder">Olá, Kotlin!</string>
+    <string name="user_greeting_placeholder">Olá, Kotlin!</string>
     <string name="button_new_phrase">Nova Frase</string>
-    <string name="user_greeeting">Olá, %s!</string>
+    <string name="user_greeting">Olá, %s!</string>
+    <string name="all_phrases_action">Show all phrases</string>
+    <string name="happy_phrases_action">Show happy phrases</string>
+    <string name="sunny_phrases_action">Show sunny phrases</string>
 </resources>
