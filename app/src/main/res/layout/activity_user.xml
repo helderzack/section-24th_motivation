@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="?attr/colorPrimary" />
+
+    <TextView
+        android:id="@+id/text_hello_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:textSize="16sp"
+        tools:text="@string/user_placeholder" />
+
+    <TextView
+        android:id="@+id/text_motivation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="16dp"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="@string/motivation_placeholder"
+        android:text="@string/motivation_placeholder"/>
+
+    <View
+        android:layout_width="100dp"
+        android:layout_height="4dp"
+        android:layout_below="@id/text_motivation"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:background="?attr/colorPrimary" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="16dp"
+        android:background="@drawable/round_corners"
+        android:backgroundTint="?attr/colorPrimary"
+        android:paddingHorizontal="16dp"
+        android:text="@string/button_new_phrase"
+        android:textColor="?attr/colorOnPrimary" />
+</RelativeLayout>

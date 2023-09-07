@@ -3,4 +3,9 @@
     <string name="home_header">Vamos começar?</string>
     <string name="edit_placeholder">Qual seu nome?</string>
     <string name="save_button">Salvar</string>
+    <string name="toast_text">Please enter your name!</string>
+    <string name="motivation_placeholder">Você não é derrotado quando perde, você é derrotado quando desiste!</string>
+    <string name="user_placeholder">Olá, Kotlin!</string>
+    <string name="button_new_phrase">Nova Frase</string>
+    <string name="user_greeeting">Olá, %s!</string>
 </resources>
