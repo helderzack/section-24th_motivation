@@ -41,6 +41,5 @@
         android:background="@drawable/round_corners"
         android:backgroundTint="?attr/colorPrimaryContainer"
         android:paddingHorizontal="28dp"
-        android:text="@string/save_button"
-        android:textColor="?attr/colorSurface" />
+        android:text="@string/save_button" />
 </RelativeLayout>
