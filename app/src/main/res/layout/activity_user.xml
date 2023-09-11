@@ -58,6 +58,7 @@
         android:layout_marginTop="32dp"
         android:textSize="16sp"
         android:textStyle="bold"
+        android:fontFamily="@font/cabin"
         tools:text="@string/user_greeting_placeholder" />
 
     <TextView
@@ -68,6 +69,7 @@
         android:layout_marginHorizontal="16dp"
         android:textAlignment="center"
         android:textSize="16sp"
+        android:fontFamily="@font/cabin"
         android:textStyle="bold"
         tools:text="@string/motivation_placeholder" />
 
@@ -88,7 +90,9 @@
         android:layout_marginVertical="32dp"
         android:background="@drawable/round_corners"
         android:backgroundTint="?attr/colorPrimary"
+        android:fontFamily="@font/cabin"
         android:paddingHorizontal="32dp"
         android:text="@string/button_new_phrase"
-        android:textColor="?attr/colorOnPrimary" />
+        android:textColor="?attr/colorOnPrimary"
+        android:textStyle="bold" />
 </RelativeLayout>
