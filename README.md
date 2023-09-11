@@ -24,6 +24,7 @@ course that I have pushed to GitHub.
 <p align="center">
 	<small><em>User Activity - Light Theme</em></small>
 </p>
+
 ### Dark Theme
 <p align="center">
   <img src="design-preview/main-activity-dark-theme.png">
@@ -38,6 +39,7 @@ course that I have pushed to GitHub.
 <p align="center">
 	<small><em>User Activity - Dark Theme</em></small>
 </p>
+
 ## Link to previous lesson from the course
 
 [Section 20 - Travel Expense](https://github.com/helderzack/secao-20_gasto-viagem)
