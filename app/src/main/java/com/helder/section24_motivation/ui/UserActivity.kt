@@ -1,14 +1,16 @@
-package com.helder.section24_motivation
+package com.helder.section24_motivation.ui
 
 import android.os.Bundle
 import android.util.TypedValue
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import com.helder.section24_motivation.R
 import com.helder.section24_motivation.data.PhraseCategory
 import com.helder.section24_motivation.data.PhraseRepository
 import com.helder.section24_motivation.databinding.ActivityUserBinding
 import com.helder.section24_motivation.security.SecurityPreferences
+import com.helder.section24_motivation.util.MotivationConstants
 
 class UserActivity : AppCompatActivity() {
     private lateinit var binding: ActivityUserBinding
@@ -37,7 +39,8 @@ class UserActivity : AppCompatActivity() {
             colorOnPrimaryContainer =
                 ContextCompat.getColor(applicationContext, typedValue.resourceId)
 
-            val userName = SecurityPreferences(applicationContext).getString("USER_NAME")
+            val userName =
+                SecurityPreferences(applicationContext).getString(MotivationConstants.KEY.USER_NAME)
             textHelloUser.text = getString(R.string.user_greeting, userName)
 
             getNewPhrase()

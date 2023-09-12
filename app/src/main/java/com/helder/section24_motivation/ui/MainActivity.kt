@@ -1,11 +1,13 @@
-package com.helder.section24_motivation
+package com.helder.section24_motivation.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.helder.section24_motivation.R
 import com.helder.section24_motivation.databinding.ActivityMainBinding
 import com.helder.section24_motivation.security.SecurityPreferences
+import com.helder.section24_motivation.util.MotivationConstants
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -35,7 +37,8 @@ class MainActivity : AppCompatActivity() {
                 .show()
             return
         }
-        SecurityPreferences(this).storeString("USER_NAME", userName)
+
+        SecurityPreferences(this).storeString(MotivationConstants.KEY.USER_NAME, userName)
         val intent = Intent(this@MainActivity, UserActivity::class.java)
         startActivity(intent)
     }
