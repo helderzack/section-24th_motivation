@@ -8,6 +8,7 @@ import androidx.core.content.ContextCompat
 import com.helder.section24_motivation.data.PhraseCategory
 import com.helder.section24_motivation.data.PhraseRepository
 import com.helder.section24_motivation.databinding.ActivityUserBinding
+import com.helder.section24_motivation.security.SecurityPreferences
 
 class UserActivity : AppCompatActivity() {
     private lateinit var binding: ActivityUserBinding
@@ -36,7 +37,7 @@ class UserActivity : AppCompatActivity() {
             colorOnPrimaryContainer =
                 ContextCompat.getColor(applicationContext, typedValue.resourceId)
 
-            val userName = intent.getStringExtra("userName")!!
+            val userName = SecurityPreferences(applicationContext).getString("USER_NAME")
             textHelloUser.text = getString(R.string.user_greeting, userName)
 
             getNewPhrase()

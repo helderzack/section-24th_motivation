@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.helder.section24_motivation.databinding.ActivityMainBinding
+import com.helder.section24_motivation.security.SecurityPreferences
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -34,8 +35,8 @@ class MainActivity : AppCompatActivity() {
                 .show()
             return
         }
+        SecurityPreferences(this).storeString("USER_NAME", userName)
         val intent = Intent(this@MainActivity, UserActivity::class.java)
-        intent.putExtra("userName", userName)
         startActivity(intent)
     }
 }
