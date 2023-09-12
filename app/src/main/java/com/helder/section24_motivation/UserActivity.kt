@@ -44,21 +44,15 @@ class UserActivity : AppCompatActivity() {
             imageAllPhrasesAction.setColorFilter(colorPrimaryInverse)
 
             imageAllPhrasesAction.setOnClickListener {
-                phraseCategory = null
-                changeClickedIconColor(imageAllPhrasesAction)
-                getNewPhrase()
+                handleClickOnIcon(imageAllPhrasesAction)
             }
 
             imageHappyPhrasesAction.setOnClickListener {
-                phraseCategory = PhraseCategory.Happy
-                changeClickedIconColor(imageHappyPhrasesAction)
-                getNewPhrase()
+                handleClickOnIcon(imageHappyPhrasesAction)
             }
 
             imageSunnyPhrasesAction.setOnClickListener {
-                phraseCategory = PhraseCategory.Sunny
-                changeClickedIconColor(imageSunnyPhrasesAction)
-                getNewPhrase()
+                handleClickOnIcon(imageSunnyPhrasesAction)
             }
 
             buttonNewPhrase.setOnClickListener { getNewPhrase() }
@@ -78,27 +72,30 @@ class UserActivity : AppCompatActivity() {
         binding.textMotivation.text = phrase
     }
 
-    private fun changeClickedIconColor(clickedIcon: ImageView) {
+    private fun handleClickOnIcon(clickedIcon: ImageView) {
         with(binding) {
+            imageAllPhrasesAction.setColorFilter(colorOnPrimaryContainer)
+            imageHappyPhrasesAction.setColorFilter(colorOnPrimaryContainer)
+            imageSunnyPhrasesAction.setColorFilter(colorOnPrimaryContainer)
+
             when (clickedIcon.id) {
                 R.id.image_all_phrases_action -> {
                     imageAllPhrasesAction.setColorFilter(colorPrimaryInverse)
-                    imageHappyPhrasesAction.setColorFilter(colorOnPrimaryContainer)
-                    imageSunnyPhrasesAction.setColorFilter(colorOnPrimaryContainer)
+                    phraseCategory = null
                 }
 
                 R.id.image_happy_phrases_action -> {
-                    imageAllPhrasesAction.setColorFilter(colorOnPrimaryContainer)
+                    phraseCategory = PhraseCategory.Happy
                     imageHappyPhrasesAction.setColorFilter(colorPrimaryInverse)
-                    imageSunnyPhrasesAction.setColorFilter(colorOnPrimaryContainer)
                 }
 
                 R.id.image_sunny_phrases_action -> {
-                    imageAllPhrasesAction.setColorFilter(colorOnPrimaryContainer)
-                    imageHappyPhrasesAction.setColorFilter(colorOnPrimaryContainer)
+                    phraseCategory = PhraseCategory.Sunny
                     imageSunnyPhrasesAction.setColorFilter(colorPrimaryInverse)
                 }
             }
         }
+
+        getNewPhrase()
     }
 }
