@@ -8,15 +8,18 @@ import androidx.core.content.ContextCompat
 import com.helder.section24_motivation.data.PhraseCategory
 import com.helder.section24_motivation.data.PhraseRepository
 import com.helder.section24_motivation.databinding.ActivityUserBinding
+import java.util.Locale
 
 class UserActivity : AppCompatActivity() {
     private lateinit var binding: ActivityUserBinding
+    private lateinit var deviceLanguage: String
     private val phraseRepository = PhraseRepository.getInstance()
     private var colorPrimaryInverse: Int = 0
     private var colorOnPrimaryContainer: Int = 0
     private var phraseCategory: PhraseCategory? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        deviceLanguage =Locale.getDefault().language
         binding = ActivityUserBinding.inflate(layoutInflater)
 
         with(binding) {
@@ -63,9 +66,9 @@ class UserActivity : AppCompatActivity() {
 
     private fun getNewPhrase() {
         val phrase: String = if (phraseCategory == null) {
-            phraseRepository.getData().random().phrase
+            phraseRepository.getData(deviceLanguage).random().phrase
         } else {
-            phraseRepository.getData().filter { it.phraseCategory == phraseCategory }
+            phraseRepository.getData(deviceLanguage).filter { it.phraseCategory == phraseCategory }
                 .random().phrase
         }
 

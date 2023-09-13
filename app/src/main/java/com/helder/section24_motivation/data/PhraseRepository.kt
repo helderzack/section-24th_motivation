@@ -28,5 +28,27 @@ class PhraseRepository private constructor() {
         Phrase("Riscos devem ser corridos, porque o maior perigo é não arriscar nada!", PhraseCategory.Sunny)
     )
 
-    fun getData(): List<Phrase> = phrases
+    private val phrasesInEnglish = listOf(
+        Phrase("Not knowing it was impossible, he went there and did it.", PhraseCategory.Happy),
+        Phrase("You are not defeated when you lose, you are defeated when you give up!", PhraseCategory.Happy),
+        Phrase("When it's darker, we see more stars!", PhraseCategory.Happy),
+        Phrase("Insanity is doing the same thing over and over again and expect a different result.", PhraseCategory.Happy),
+        Phrase("Don't stop when you're tired, stop when you're finished.", PhraseCategory.Happy),
+        Phrase("What can you do right now that has the biggest impact on your success?", PhraseCategory.Happy),
+        Phrase("The best way to predict the future is to invent it.", PhraseCategory.Sunny),
+        Phrase("You lose every chance you don't take. .", PhraseCategory.Sunny),
+        Phrase("Failure is the condiment that flavors success.", PhraseCategory.Sunny),
+        Phrase("As long as we are not committed, there will be hesitation!", PhraseCategory.Sunny),
+        Phrase("If you don't know where you want to go, any path will do", PhraseCategory.Sunny),
+        Phrase("If you believe, it makes all the difference.", PhraseCategory.Sunny),
+        Phrase("Risks must be taken, because the greatest danger is not risking anything!", PhraseCategory.Sunny)
+    )
+
+    fun getData(deviceLanguage: String): List<Phrase> {
+        if(deviceLanguage == "pt") {
+            return phrases
+        }
+
+        return phrasesInEnglish
+    }
 }
