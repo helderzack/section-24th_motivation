@@ -1,14 +1,14 @@
 <resources>
-    <string name="app_name">Section24-Motivation</string>
+    <string name="app_name">Secao-24_Motivation</string>
     <string name="home_header">Vamos começar?</string>
     <string name="edit_placeholder">Qual seu nome?</string>
     <string name="save_button">Salvar</string>
-    <string name="toast_text">Please enter your name!</string>
+    <string name="toast_text">Por favor, informe o seu nome!</string>
     <string name="motivation_placeholder">Você não é derrotado quando perde, você é derrotado quando desiste!</string>
     <string name="user_greeting_placeholder">Olá, Kotlin!</string>
     <string name="button_new_phrase">Nova Frase</string>
     <string name="user_greeting">Olá, %s!</string>
-    <string name="all_phrases_action">Show all phrases</string>
-    <string name="happy_phrases_action">Show happy phrases</string>
-    <string name="sunny_phrases_action">Show sunny phrases</string>
+    <string name="all_phrases_action">Mostra todas as frases</string>
+    <string name="happy_phrases_action">Mostra frases felizes</string>
+    <string name="sunny_phrases_action">Mostra frases ensolaradas</string>
 </resources>

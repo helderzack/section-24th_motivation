@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Section-24_Motivation</string>
+    <string name="home_header">Let\'s begin?</string>
+    <string name="edit_placeholder">What\'s your name?</string>
+    <string name="save_button">Save</string>
+    <string name="toast_text">Please enter your name!</string>
+    <string name="motivation_placeholder">Your are not defeated when you lose, you are defeated when you give up!</string>
+    <string name="user_greeting_placeholder">Hello, Kotlin!</string>
+    <string name="button_new_phrase">New Phrase</string>
+    <string name="user_greeting">Hello, %s!</string>
+    <string name="all_phrases_action">Show all phrases</string>
+    <string name="happy_phrases_action">Show happy phrases</string>
+    <string name="sunny_phrases_action">Show sunny phrases</string>
+</resources>
